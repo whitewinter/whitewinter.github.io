@@ -97,7 +97,7 @@ var gemeinden = false;
   }
   
 
-  const laenderLayer = new L.geoJSON.ajax("data/geo/laender_95_geo.json", options).addTo(map);
+  const laenderLayer = new L.geoJSON.ajax("laender_95_geo.json", options).addTo(map);
 
   const overlayLayersLaender = {
     "Bundeslaender": laenderLayer
@@ -122,7 +122,7 @@ var gemeinden = false;
     }
   }
 
-  const bezirkeLayerHandler = new L.geoJSON.ajax("data/geo/bezirke_95_geo.json", steiermarkBezirkeOptions);
+  const bezirkeLayerHandler = new L.geoJSON.ajax("bezirke_95_geo.json", steiermarkBezirkeOptions);
 
 
   const klarGemeindeList =
@@ -139,7 +139,7 @@ var gemeinden = false;
     }
   }
 
-  const gemeindenLayerHandler = new L.geoJSON.ajax("data/geo/gemeinden_95_geo.json", guGemeindenOptions);
+  const gemeindenLayerHandler = new L.geoJSON.ajax("gemeinden_95_geo.json", guGemeindenOptions);
   
   map.on('zoomend', function() {
 
